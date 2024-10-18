@@ -1,4 +1,5 @@
 ## Keywords
+
 ```jai
 Any
 bool
@@ -45,6 +46,7 @@ while
 ```
 
 ## Directives
+
 ```jai
 #assert cond "msg";
 #bake_constant x;
@@ -98,4 +100,13 @@ enum #specified {}
 #type,isa x;
 #type_info_none
 #type_info_procedures_are_void_pointers
+```
+
+## Loops
+
+```jai
+// for [<] [*] [name[, index] :] iterable body
+//     where < = reversed, * = by pointer, name subsides it, index subsides it_index
+// For example...
+for int.[5, 10, 15] print("%: %\n", it_index, it);
 ```
