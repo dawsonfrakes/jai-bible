@@ -48,6 +48,7 @@ while
 ## Directives
 
 ```jai
+#add_context decl;
 #assert cond "msg";
 #bake_constant x;
 #bake_argument x;
