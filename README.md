@@ -146,3 +146,8 @@ enum #specified {}
 // For example...
 for int.[5, 10, 15] print("%: %\n", it_index, it);
 ```
+
+## Based on
+
+- [The Pure sh Bible](https://github.com/dylanaraps/pure-sh-bible)
+- [Modern OpenGL Guide](https://github.com/fendevel/Guide-to-Modern-OpenGL-Functions)
