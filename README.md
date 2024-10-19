@@ -55,19 +55,30 @@ xx
 
 ```jai
 #add_context decl;
+#align
+#as
+#asm
 #assert cond "msg";
-#bake_constant x;
-#bake_argument x;
+#bytes
+#bake_constants x;
+#bake_arguments x;
+() #c_call
 #caller_code
 #caller_location
+#char
 #code x;
 #code,null;
 () #compile_time
 () #compiler;
 if #complete x == { ... }
-() #c_call
+#cpp_method
+#cpp_return_type_is_non_pod
+#deprecated
+#discard
 () #dump
+#dynamic_specialize
 () #elsewhere
+#entry_point
 #expand
 #file
 #filepath
@@ -79,21 +90,35 @@ if #complete x == { ... }
 #import,file "";
 #import,string "";
 #insert x;
+#insert_internal
 #insert,scope();
 () #intrinsic;
 #library
 #library,no_static_library
 #library,system
+#line
 #load "file";
 #location(x)
 #modify x
 #module_parameters(x)(x);
+#must
+#no_abc
+#no_alias
+#no_aoc
+#no_debug
+#no_padding
 () #no_context;
 #no_reset decl;
+#place
+#placeholder
+#poke_name
+#procedure_name
 #procedure_of_call x;
+#program_export
 #run x;
 #run,host x;
 #run,stallable x;
+#runtime_support
 #scope_export
 #scope_file
 #scope_module
@@ -106,6 +131,7 @@ enum #specified {}
 #type x;
 #type,distinct x;
 #type,isa x;
+#type_info_no_size_complaint
 #type_info_none
 #type_info_procedures_are_void_pointers
 ```
