@@ -157,8 +157,8 @@ xx
 ## Loops
 
 ```jai
-// for [<[=exp]] [*[=exp]] [name[, index] :] iterable body
-//     where < = reversed, * = by pointer, name subsides it, index subsides it_index
+// for [<[=exp]] [*[=exp]] [:iterator] [name[, index] :] iterable body
+//     where < = reversed, * = by pointer, iterator = a for_expansion, name replaces `it`, index replaces `it_index`
 // while [name :=] condition body
 //     where name can be used in break/continue statements
 
