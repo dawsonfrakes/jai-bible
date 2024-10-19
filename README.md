@@ -159,20 +159,13 @@ xx
 ```jai
 // for [<[=exp]] [*[=exp]] [name[, index] :] iterable body
 //     where < = reversed, * = by pointer, name subsides it, index subsides it_index
-
-// An example...
-for int.[5, 10, 15] print("%: %\n", it_index, it);
-
-// or for maximum verbosity...
-for <=false *=false value, index : int.[5, 10, 15] print("%: %\n", index, value);
-
-// can loop over ranges (note: end is INCLUSIVE!)
-// can be continued and breaked by index name
-for j: 4..5 for i: 1..3 break j;
-
 // while [name :=] condition body
+//     where name can be used in break/continue statements
 
-// such as
+// Examples...
+for int.[5, 10, 15] print("%: %\n", it_index, it);
+for <=false *=false value, index : int.[5, 10, 15] print("%: %\n", index, value);
+for j: 4..5 for i: 1..3 break j; // can break by name. note: end of ranges are INCLUSIVE!
 while true print("Welcome to a world of endless wonder.\n");
 ```
 
