@@ -82,6 +82,7 @@ if #complete x == { ... }
 #location(x)
 #modify x
 #module_parameters(x)(x);
+() #no_context;
 #no_reset decl;
 #procedure_of_call x;
 #run x;
