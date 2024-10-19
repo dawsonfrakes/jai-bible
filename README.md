@@ -1,5 +1,11 @@
 # The Language
 
+## Table of Contents
+
+- [Keywords](#keywords)
+- [Directives](#directives)
+- [Loops](#loops)
+
 ## Keywords
 
 ```jai
@@ -19,7 +25,9 @@ else
 enum
 enum_flags
 false
-float, float32, float64
+float
+float32
+float64
 for
 remove
 if
@@ -36,7 +44,10 @@ null
 OS
 operator
 push_context
-s8, s16, s32, s64
+s8
+s16
+s32
+s64
 size_of
 string
 struct
@@ -45,7 +56,10 @@ true
 Type
 type_info
 type_of
-u8, u16, u32, u64
+u8
+u16
+u32
+u64
 union
 using
 using,except
@@ -58,83 +72,83 @@ xx
 ## Directives
 
 ```jai
-#add_context decl;
+#add_context
 #align
 #as
 #asm
-#assert cond "msg";
+#assert
 #bytes
-#bake_constants x;
-#bake_arguments x;
-() #c_call
+#bake_constants
+#bake_arguments
+#c_call
 #caller_code
 #caller_location
 #char
-#code x;
-#code,null;
-() #compile_time
-() #compiler;
-if #complete x == { ... }
+#code
+#code,null
+#compile_time
+#compiler
+#complete
 #cpp_method
 #cpp_return_type_is_non_pod
 #deprecated
 #discard
-() #dump
+#dump
 #dynamic_specialize
-() #elsewhere
+#elsewhere
 #entry_point
 #expand
 #file
 #filepath
-() #foreign
-#if cond x;
-#ifx ...
-#import "module";
-#import,dir "";
-#import,file "";
-#import,string "";
-#insert x;
+#foreign
+#if
+#ifx
+#import
+#import,dir
+#import,file
+#import,string
+#insert
 #insert_internal
-#insert,scope();
-() #intrinsic;
+#insert,scope
+#intrinsic
 #library
 #library,no_static_library
 #library,system
 #line
-#load "file";
-#location(x)
-#modify x
-#module_parameters(x)(x);
+#load
+#location
+#modify
+#module_parameters
 #must
 #no_abc
 #no_alias
 #no_aoc
 #no_debug
 #no_padding
-() #no_context;
-#no_reset decl;
+#no_context
+#no_reset
 #place
 #placeholder
 #poke_name
 #procedure_name
-#procedure_of_call x;
+#procedure_of_call
 #program_export
-#run x;
-#run,host x;
-#run,stallable x;
+#run
+#run,host
+#run,stallable
 #runtime_support
 #scope_export
 #scope_file
 #scope_module
-enum #specified {}
-#string delim\n...delim
+#specified
+#string
 #symmetric
 #system_library
 #this
-#through;
-#type x;
-#type,distinct x;
-#type,isa x;
+#through
+#type
+#type,distinct
+#type,isa
 #type_info_no_size_complaint
 #type_info_none
 #type_info_procedures_are_void_pointers
