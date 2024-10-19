@@ -28,7 +28,7 @@ it
 it_index
 null
 operator
-s8, s16, s32, s64, s128
+s8, s16, s32, s64
 size_of
 string
 struct
@@ -37,7 +37,7 @@ true
 Type
 type_info
 type_of
-u8, u16, u32, u64, u128
+u8, u16, u32, u64
 using
 using,except
 using,map
