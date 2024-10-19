@@ -141,7 +141,7 @@ enum #specified {}
 ## Loops
 
 ```jai
-// for [<] [*] [name[, index] :] iterable body
+// for [<[=exp]] [*[=exp]] [name[, index] :] iterable body
 //     where < = reversed, * = by pointer, name subsides it, index subsides it_index
 // For example...
 for int.[5, 10, 15] print("%: %\n", it_index, it);
