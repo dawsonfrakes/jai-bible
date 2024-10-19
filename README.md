@@ -145,8 +145,21 @@ enum #specified {}
 ```jai
 // for [<[=exp]] [*[=exp]] [name[, index] :] iterable body
 //     where < = reversed, * = by pointer, name subsides it, index subsides it_index
-// For example...
+
+// An example...
 for int.[5, 10, 15] print("%: %\n", it_index, it);
+
+// or for maximum verbosity...
+for <=false *=false value, index : int.[5, 10, 15] print("%: %\n", index, value);
+
+// can loop over ranges (note: end is INCLUSIVE!)
+// can be continued and breaked by index name
+for j: 4..5 for i: 1..3 break j;
+
+// while [name :=] condition body
+
+// such as
+while true print("Welcome to a world of endless wonder.\n");
 ```
 
 ## Based on
