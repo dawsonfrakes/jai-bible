@@ -4,6 +4,7 @@
 Any
 bool
 break
+CPU
 case
 cast
 cast,no_check
@@ -30,6 +31,7 @@ it
 it_index
 no_inline
 null
+OS
 operator
 push_context
 s8, s16, s32, s64
