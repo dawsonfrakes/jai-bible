@@ -8,6 +8,7 @@ case
 cast
 cast,no_check
 Code
+code_of
 Context
 context
 continue
@@ -20,14 +21,17 @@ for
 remove
 if
 ifx
+initializer_of
 inline
 int
 interface
 is_constant
 it
 it_index
+no_inline
 null
 operator
+push_context
 s8, s16, s32, s64
 size_of
 string
@@ -38,6 +42,7 @@ Type
 type_info
 type_of
 u8, u16, u32, u64
+union
 using
 using,except
 using,map
