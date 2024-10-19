@@ -162,7 +162,6 @@ xx
 // while [name :=] condition body
 //     where name can be used in break/continue statements
 
-// Examples...
 for int.[5, 10, 15] print("%: %\n", it_index, it);
 for <=false *=false value, index : int.[5, 10, 15] print("%: %\n", index, value);
 for j: 4..5 for i: 1..3 break j; // can break by name. note: end of ranges are INCLUSIVE!
