@@ -85,6 +85,7 @@ xx
 #caller_location
 #char
 #code
+#code,typed
 #code,null
 #compile_time
 #compiler
@@ -112,6 +113,7 @@ xx
 #insert,scope
 #intrinsic
 #library
+#library,link_always
 #library,no_static_library
 #library,system
 #line
@@ -123,6 +125,7 @@ xx
 #no_abc
 #no_alias
 #no_aoc
+#no_call
 #no_debug
 #no_padding
 #no_context
