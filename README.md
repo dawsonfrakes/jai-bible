@@ -15,6 +15,7 @@ break
 CPU
 case
 cast
+cast,force
 cast,no_check
 Code
 code_of
@@ -98,6 +99,7 @@ xx
 #dynamic_specialize
 #elsewhere
 #entry_point
+#exists
 #expand
 #file
 #filepath
