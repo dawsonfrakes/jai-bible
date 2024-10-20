@@ -109,8 +109,8 @@ xx
 #import,file
 #import,string
 #insert
-#insert_internal
 #insert,scope
+#insert_internal
 #intrinsic
 #library
 #library,link_always
