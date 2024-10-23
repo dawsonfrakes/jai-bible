@@ -4,6 +4,7 @@
 
 - [Keywords](#keywords)
 - [Directives](#directives)
+- [Precedence](#precedence)
 - [Loops](#loops)
 
 ## Keywords
@@ -38,8 +39,6 @@ inline
 int
 interface
 is_constant
-it
-it_index
 no_inline
 null
 OS
@@ -157,6 +156,12 @@ xx
 #type_info_no_size_complaint
 #type_info_none
 #type_info_procedures_are_void_pointers
+```
+
+## Precedence
+
+```jai
+under construction...
 ```
 
 ## Loops
