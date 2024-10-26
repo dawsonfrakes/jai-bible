@@ -51,6 +51,7 @@ s64
 size_of
 string
 struct
+TEMPORARY_STORAGE_SIZE
 then
 true
 Type
