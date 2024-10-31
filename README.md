@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Keywords](#keywords)
+- [Compiler Defines](#compiler-defines)
 - [Directives](#directives)
 - [Precedence](#precedence)
 - [Loops](#loops)
@@ -13,7 +14,6 @@
 Any
 bool
 break
-CPU
 case
 cast
 cast,force
@@ -39,10 +39,8 @@ inline
 int
 interface
 is_constant
-MACHINE_OPTIONS_SIZE
 no_inline
 null
-OS
 operator
 push_context
 s8
@@ -52,7 +50,6 @@ s64
 size_of
 string
 struct
-TEMPORARY_STORAGE_SIZE
 then
 true
 Type
@@ -69,6 +66,15 @@ using,map
 using,only
 while
 xx
+```
+
+## Compiler Defines
+
+```jai
+CPU
+MACHINE_OPTIONS_SIZE
+OS
+TEMPORARY_STORAGE_SIZE
 ```
 
 ## Directives
