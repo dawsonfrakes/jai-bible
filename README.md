@@ -39,6 +39,7 @@ inline
 int
 interface
 is_constant
+MACHINE_OPTIONS_SIZE
 no_inline
 null
 OS
