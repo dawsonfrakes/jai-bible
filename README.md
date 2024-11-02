@@ -4,6 +4,7 @@
 
 - [Keywords](#keywords)
 - [Compiler Defines](#compiler-defines)
+- [Compiler Builtins](#compiler-builtins)
 - [Directives](#directives)
 - [Precedence](#precedence)
 - [Loops](#loops)
@@ -77,6 +78,52 @@ CPU
 MACHINE_OPTIONS_SIZE
 OS
 TEMPORARY_STORAGE_SIZE
+```
+
+## Compiler Builtins
+
+```jai
+write_string :: (s: string, to_standard_error := false) #no_context #compiler;
+write_strings :: (strings: ..string, to_standard_error := false) #no_context #compiler;
+compile_time_debug_break :: () #no_context #compiler;
+get_current_workspace :: () -> Workspace #compiler;
+get_name :: (w: Workspace = -1) -> string #compiler;
+compiler_create_workspace :: (name := "") -> Workspace #compiler;
+compiler_destroy_workspace :: (w: Workspace) #compiler;
+compiler_begin_intercept :: (w: Workspace, flags: Intercept_Flags = 0) #compiler;
+compiler_end_intercept :: (w: Workspace) #compiler;
+compiler_wait_for_message :: () -> *Message #compiler;
+compiler_modify_procedure :: (w: Workspace, body: *Code_Procedure_Body) #compiler;
+compiler_make_procedure_live :: (w: Workspace, header: *Code_Procedure_Header) #compiler;
+compiler_custom_link_command_is_complete :: (w: Workspace) #compiler;
+compiler_get_struct_location :: (w: Workspace, info: *Type_Info_Struct) -> Source_Code_Location #compiler;
+compiler_set_workspace_status :: (status: Workspace_Status, w: Workspace = -1) #compiler;
+get_runtime_info :: (w: Workspace = -1) -> Runtime_Info #compiler;
+get_type_table :: (w: Workspace = -1) -> [] *Type_Info;
+add_build_file :: (filename: string, w: Workspace, loc := #caller_location) #compiler;
+add_build_string :: (data: string, w: Workspace, code := #code,null, loc := #caller_location) #compiler;
+add_build_string_scoped_by_message :: (data: string, w: Workspace, message: *Message, loc := #caller_location) #compiler;
+get_build_options :: (w: Workspace = -1) -> Build_Options #compiler;
+set_build_options :: (options: Build_Options, w: Workspace = -1, loc := #caller_location) #compiler;
+remap_import :: (w: Workspace, host_module_name: string, import_name: string, replacement_name: string) #compiler;
+provide_import :: (w: Workspace, message: *Message_Failed_Import, type: Provided_Import_Type, value: string) #compiler;
+set_build_options_dc :: (options: Build_Options_During_Compile, w: Workspace = -1) #compiler;
+add_global_data :: (data: [] u8, segment: Data_Segment_Index, user_segment: *Data_Segment = null, w: Workspace = -1) -> [] u8 #compiler;
+add_data_segment :: (section_name: string, characteristics := Data_Segment_Characteristics.READ | .WRITE, alignment: s32 = 16, w: Workspace = -1) -> (segment: *Data_Segment, actual_segment_will_be_created: bool) #compiler;
+compiler_get_version_info :: (version_info_return: *Version_Info) -> string #compiler;
+compiler_report :: (message: string, loc := #caller_location, mode := Report.ERROR) #compiler;
+compiler_report_errors_for_unresolved_identifiers :: (filename: string, w: Workspace = -1) #compiler;
+compiler_report_errors_for_untyped_declarations_with_these_notes :: (w: Workspace, labels: .. string) #compiler;
+compiler_set_memory_breakpoint :: (pointer: *void) #compiler;
+compiler_add_library_search_directory :: (path: string) #compiler;
+compiler_get_nodes :: (code: Code) -> (root: *Code_Node, expressions: [] *Code_Node) #compiler;
+compiler_get_code :: (node: *Code_Node, code_to_copy_scope_from: Code = #code,null) -> Code #compiler;
+compiler_set_type_info_flags :: (type: Type, flags: Type_Info_Flags) #compiler;
+get_root_type :: (code: Code) -> (status: Get_Root_Type_Status, type: Type) #compiler;
+get_type :: (ti: *Type_Info) -> Type #compiler;
+developer_debug :: (x: *void) #compiler;
+get_toplevel_command_line :: () -> [] string #compiler;
+compiler_get_base_path :: () -> string #compiler;
 ```
 
 ## Directives
