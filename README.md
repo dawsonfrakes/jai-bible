@@ -4,8 +4,8 @@
 
 - [Keywords](#keywords)
 - [Compiler Defines](#compiler-defines)
-- [Compiler Builtins](#compiler-builtins)
 - [Directives](#directives)
+- [Compiler Builtins](#compiler-builtins)
 - [Precedence](#precedence)
 - [Loops](#loops)
 
@@ -18,7 +18,9 @@ break
 case
 cast
 cast,force
+cast,FORCE
 cast,no_check
+cast,trunc
 Code
 code_of
 Context
@@ -46,6 +48,7 @@ no_inline
 null
 operator
 push_context
+push_context,defer_pop
 s8
 s16
 s32
@@ -78,6 +81,97 @@ CPU
 MACHINE_OPTIONS_SIZE
 OS
 TEMPORARY_STORAGE_SIZE
+```
+
+## Directives
+
+```jai
+#add_context
+#align
+#as
+#asm
+#assert
+#bytes
+#bake_constants
+#bake_arguments
+#c_call
+#caller_code
+#caller_location
+#char
+#code
+#code,typed
+#code,null
+#compile_time
+#compiler
+#complete
+#cpp_method
+#cpp_return_type_is_non_pod
+#deprecated
+#discard
+#dump
+#dynamic_specialize
+#elsewhere
+#entry_point
+#exists
+#expand
+#file
+#filepath
+#foreign
+#if
+#ifx
+#import
+#import,dir
+#import,file
+#import,string
+#import,unshared
+#insert
+#insert,scope()
+#insert_internal
+#intrinsic
+#library
+#library,link_always
+#library,no_dll
+#library,no_static_library
+#library,system
+#line
+#load
+#location
+#modify
+#module_parameters
+#must
+#no_abc
+#no_alias
+#no_aoc
+#no_call
+#no_debug
+#no_padding
+#no_context
+#no_reset
+#place
+#placeholder
+#poke_name
+#procedure_name
+#procedure_of_call
+#program_export
+#run
+#run,host
+#run,stallable
+#runtime_support
+#scope_export
+#scope_file
+#scope_module
+#specified
+#string
+#symmetric
+#system_library
+#this
+#through
+#type
+#type,distinct
+#type,isa
+#type_info_no_size_complaint
+#type_info_none
+#type_info_procedures_are_void_pointers
 ```
 
 ## Compiler Builtins
@@ -124,95 +218,6 @@ get_type :: (ti: *Type_Info) -> Type #compiler;
 developer_debug :: (x: *void) #compiler;
 get_toplevel_command_line :: () -> [] string #compiler;
 compiler_get_base_path :: () -> string #compiler;
-```
-
-## Directives
-
-```jai
-#add_context
-#align
-#as
-#asm
-#assert
-#bytes
-#bake_constants
-#bake_arguments
-#c_call
-#caller_code
-#caller_location
-#char
-#code
-#code,typed
-#code,null
-#compile_time
-#compiler
-#complete
-#cpp_method
-#cpp_return_type_is_non_pod
-#deprecated
-#discard
-#dump
-#dynamic_specialize
-#elsewhere
-#entry_point
-#exists
-#expand
-#file
-#filepath
-#foreign
-#if
-#ifx
-#import
-#import,dir
-#import,file
-#import,string
-#insert
-#insert,scope
-#insert_internal
-#intrinsic
-#library
-#library,link_always
-#library,no_static_library
-#library,system
-#line
-#load
-#location
-#modify
-#module_parameters
-#must
-#no_abc
-#no_alias
-#no_aoc
-#no_call
-#no_debug
-#no_padding
-#no_context
-#no_reset
-#place
-#placeholder
-#poke_name
-#procedure_name
-#procedure_of_call
-#program_export
-#run
-#run,host
-#run,stallable
-#runtime_support
-#scope_export
-#scope_file
-#scope_module
-#specified
-#string
-#symmetric
-#system_library
-#this
-#through
-#type
-#type,distinct
-#type,isa
-#type_info_no_size_complaint
-#type_info_none
-#type_info_procedures_are_void_pointers
 ```
 
 ## Precedence
