@@ -6,7 +6,7 @@
 - [Compiler Defines](#compiler-defines)
 - [Directives](#directives)
 - [Compiler Builtins](#compiler-builtins)
-- [Precedence](#precedence)
+- [Operators](#operators)
 - [Loops](#loops)
 
 ## Keywords
@@ -220,10 +220,18 @@ get_toplevel_command_line :: () -> [] string #compiler;
 compiler_get_base_path :: () -> string #compiler;
 ```
 
-## Precedence
+## Operators
+
+- !!under construction!!
 
 ```jai
-note: under construction...
+/*
+unary: << + - .*
+binary: + - * /
+bitwise: ~ & | ^
+shifts: << <<,logical <<,small >> >>,logical >>,small
+rotates: <<< >>>
+
 0: ~
 1: &
 2: |
@@ -231,6 +239,7 @@ note: under construction...
 4: == !=
 5: &&
 6: ||
+*/
 ```
 
 ## Loops
