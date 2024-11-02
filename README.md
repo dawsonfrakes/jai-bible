@@ -39,6 +39,8 @@ inline
 int
 interface
 is_constant
+it
+it_index
 no_inline
 null
 operator
