@@ -138,7 +138,30 @@ true
 #type_info_none
 #type_info_procedures_are_void_pointers
 
-// === Grammar (~ABNF) (In progress) ===
+// === Precedence (Untested) ===
++= -= *= /= %= <<= >>= <<<= >>>= &= |= ^= &&= ||=
+||
+&&
+!x
+< > <= >= == !=
+|
+^
+&
+<< >> <<< >>>
++ -
+* / %
++x -x ~x
+
+// === Grammar (~ABNF) (Incomplete) ===
+expression = Code_Unary_Operator / Code_Binary_Operator / Procedure_Header
+statement = Declaration / expression ";"
+params = *(Declaration ",") [Declaration]
+
+Node = Declaration / Note / Code_Unary_Operator / Code_Binary_Operator
+Node =/ Procedure_Header / Procedure_Body / Block
 Declaration =  IDENTIFIER  ":" Type_Instantiation ";"
-Declaration =/ IDENTIFIER [":" Type_Instantiation] (":" / "=") expression ";" Note*
+Declaration =/ IDENTIFIER [":" Type_Instantiation] (":" / "=") expression ";" *Note
 Note = "@" 1*VCHAR
+Procedure_Header = ("inline" / "no_inline") "(" params ")" ["->" *(expression ",") expression] Procedure_Body
+Procedure_Body = Block
+Block = "{" *statement "}"
