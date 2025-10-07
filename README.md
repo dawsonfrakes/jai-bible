@@ -138,6 +138,6 @@ true
 #type_info_none
 #type_info_procedures_are_void_pointers
 
-// === Grammar (In progress) ===
-Declaration = IDENTIFIER ":" Type_Instantiation ";"
-Declaration /= IDENTIFIER [":" Type_Instantiation] ("/" / "=") expression ";"
+// === Grammar (~ABNF) (In progress) ===
+Declaration =  IDENTIFIER  ":" Type_Instantiation ";"
+Declaration =/ IDENTIFIER [":" Type_Instantiation] (":" / "=") expression ";"
