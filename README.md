@@ -8,10 +8,11 @@ TEMPORARY_STORAGE_SIZE
 _STACK_TRACE
 
 // === Types ===
+Type
 Code
 Any
-v128
-string
+void
+bool
 int
 u8
 u16
@@ -22,11 +23,10 @@ s16
 s32
 s64
 float
-float64
 float32
-bool
-void
-Type
+float64
+v128
+string
 
 // === Keywords ===
 break
@@ -137,3 +137,7 @@ true
 #type_info_no_size_complaint
 #type_info_none
 #type_info_procedures_are_void_pointers
+
+// === Grammar (In progress) ===
+Declaration = IDENTIFIER ":" Type_Instantiation ";"
+Declaration /= IDENTIFIER [":" Type_Instantiation] ("/" / "=") expression ";"
