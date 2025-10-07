@@ -140,4 +140,5 @@ true
 
 // === Grammar (~ABNF) (In progress) ===
 Declaration =  IDENTIFIER  ":" Type_Instantiation ";"
-Declaration =/ IDENTIFIER [":" Type_Instantiation] (":" / "=") expression ";"
+Declaration =/ IDENTIFIER [":" Type_Instantiation] (":" / "=") expression ";" Note*
+Note = "@" 1*VCHAR
