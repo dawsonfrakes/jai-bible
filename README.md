@@ -160,10 +160,10 @@ true
 &&
 !x
 < > <= >= == !=
+<< >> >>,logical <<< >>>
 |
 ^
 &
-<< >> <<< >>>
 + -
 * / %
 +x -x ~x
@@ -179,5 +179,5 @@ Declaration =  IDENTIFIER  ":" Type_Instantiation ";"
 Declaration =/ IDENTIFIER [":" Type_Instantiation] (":" / "=") expression ";" *Note
 Note = "@" 1*VCHAR
 Procedure_Header = ("inline" / "no_inline") "(" params ")" ["->" *(expression ",") expression] Procedure_Body
-Procedure_Body = Block
+Procedure_Body = *("#no_context" / "#c_call" / "#compiler" / "#intrinsic") Block
 Block = "{" *statement "}"
